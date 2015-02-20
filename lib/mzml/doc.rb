@@ -60,7 +60,7 @@ module MzML
 
     # Open a file handle to a mzML document
     def initialize(mz_fname)
-      unless mz_fname =~ /\.mzML$/
+      unless mz_fname =~ /\.mzml$/i
         raise MzML::UnsupportedFileFormat.new  "File extension must be .\"mzML\""
       end
       super(mz_fname, "r")
